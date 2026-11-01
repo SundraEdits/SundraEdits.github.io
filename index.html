@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -182,6 +183,36 @@ h2 {
   border: 1px solid var(--line);
   padding: 35px;
   font: 27px Georgia, serif;
+}
+
+/* ABOUT CONTACT DETAILS */
+.about-contact {
+  margin-top: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.about-contact a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.about-contact a:hover {
+  text-decoration: underline;
+}
+
+.about-contact .contact-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: block;
 }
 
 .services-grid {
@@ -397,6 +428,34 @@ footer {
   color: var(--muted);
 }
 
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,.20);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 7px 22px rgba(0,0,0,.25);
+}
+
+.whatsapp-float svg {
+  width: 31px;
+  height: 31px;
+  fill: white;
+}
+
 .reveal { animation: appear .8s ease both; }
 
 @keyframes appear {
@@ -418,6 +477,12 @@ footer {
 @media(max-width:430px) {
   .portfolio-grid { grid-template-columns: 1fr; }
   .hero { min-height: 520px; }
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    right: 16px;
+    bottom: 17px;
+  }
 }
 </style>
 </head>
@@ -478,6 +543,22 @@ footer {
         From commercial reels to AI video production,
         every project is created with attention to detail.
       </p>
+
+      <div class="about-contact">
+        <a href="https://wa.me/919334309446" target="_blank" rel="noopener noreferrer">
+          <span>
+            <span class="contact-label">WhatsApp</span>
+            +91 93343 09446
+          </span>
+        </a>
+
+        <a href="mailto:sundraedits@gmail.com">
+          <span>
+            <span class="contact-label">Email</span>
+            sundraedits@gmail.com
+          </span>
+        </a>
+      </div>
     </div>
 
     <div class="quote">
@@ -543,7 +624,6 @@ footer {
   </div>
 </section>
 
-<!-- PORTFOLIO: ALL THREE IMAGE AND VIDEO LINKS FIXED -->
 <section id="work">
   <div class="container">
     <div class="section-label">03 / SELECTED WORK</div>
@@ -555,15 +635,12 @@ footer {
 
     <div class="portfolio-grid">
 
-      <!-- PROJECT 01 -->
       <article class="project">
         <a class="project-image"
            href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view"
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
           <img src="project-01.jpg.png"
-               alt="Project 01 Commercial Reel"
-               loading="lazy">
+               alt="Project 01 Commercial Reel" loading="lazy">
         </a>
 
         <div class="project-info">
@@ -571,20 +648,16 @@ footer {
           <p>Brand Advertisement</p>
           <a class="watch"
              href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view"
-             target="_blank"
-             rel="noopener noreferrer">Watch Project ↗</a>
+             target="_blank" rel="noopener noreferrer">Watch Project ↗</a>
         </div>
       </article>
 
-      <!-- PROJECT 02 -->
       <article class="project">
         <a class="project-image"
            href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view"
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
           <img src="project-02.jpg.png"
-               alt="Project 02 Promotional Video"
-               loading="lazy">
+               alt="Project 02 Promotional Video" loading="lazy">
         </a>
 
         <div class="project-info">
@@ -592,20 +665,16 @@ footer {
           <p>Product Promotion</p>
           <a class="watch"
              href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view"
-             target="_blank"
-             rel="noopener noreferrer">Watch Project ↗</a>
+             target="_blank" rel="noopener noreferrer">Watch Project ↗</a>
         </div>
       </article>
 
-      <!-- PROJECT 03 -->
       <article class="project">
         <a class="project-image"
            href="https://drive.google.com/file/d/14lkE9KbfTQo1B4greAFDg29u3SFbKtAF/view"
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
           <img src="project-03.jpg.png"
-               alt="Project 03 AI Video Creation"
-               loading="lazy">
+               alt="Project 03 AI Video Creation" loading="lazy">
         </a>
 
         <div class="project-info">
@@ -613,8 +682,7 @@ footer {
           <p>AI Video Production</p>
           <a class="watch"
              href="https://drive.google.com/file/d/14lkE9KbfTQo1B4greAFDg29u3SFbKtAF/view"
-             target="_blank"
-             rel="noopener noreferrer">Watch Project ↗</a>
+             target="_blank" rel="noopener noreferrer">Watch Project ↗</a>
         </div>
       </article>
 
@@ -787,6 +855,8 @@ footer {
     <p style="margin-top:25px">
       Email: sundraedits@gmail.com
       <br>
+      WhatsApp: <a href="https://wa.me/919334309446" target="_blank" rel="noopener noreferrer">+91 93343 09446</a>
+      <br>
       Location: Bihar, India
     </p>
   </div>
@@ -799,5 +869,12 @@ footer {
   <span>Creative Video Editing & AI Solutions</span>
 </footer>
 
-</body>
-</html>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="whatsapp-float"
+   href="https://wa.me/919334309446"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with Sundra Edits on WhatsApp"
+   title="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16.04 3C8.87 3 3.04 8.77 3.04 15.88c0 2.28.6 4.5 1.75 6.45L3 29l6.85-1.78a13.1 13.1 0 0 0 6.19 1.55h.01c7.17 0 13-5.77 13-12.88 0-3.44-1.35-6.67-3.8-9.1A12.94 12.94 0 0 0 16.04 3zm0 23.57h-.01a10.9 10.9 0 0 1-5.55-1.51l-.4-.24-4.06 1.05 1.08-3.94-.26-.41a10.68 10.68 0 0 1-1.66-5.64c0-5.98 4.88-10.85 10.87-10.85 2.9 0 5.63 1.13 7.68 3.18a10.75 
