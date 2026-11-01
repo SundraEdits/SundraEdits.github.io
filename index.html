@@ -224,12 +224,20 @@ h2 {
 .project-image {
   aspect-ratio: 4 / 3;
   background: #e9e6df;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #777;
-  font-size: 11px;
-  letter-spacing: 2px;
+  display: block;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.project-image:hover img {
+  transform: scale(1.04);
 }
 
 .project-info { padding: 20px; }
@@ -433,7 +441,6 @@ footer {
 
 <main>
 
-<!-- HOME -->
 <div class="hero" id="home">
   <div class="container reveal">
     <div class="eyebrow">Creative Video Editing Services · India</div>
@@ -453,7 +460,6 @@ footer {
   </div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container about-grid">
     <div>
@@ -480,7 +486,6 @@ footer {
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
   <div class="container">
     <div class="section-label">02 / WHAT WE DO</div>
@@ -491,7 +496,6 @@ footer {
     </p>
 
     <div class="services-grid">
-
       <div class="service">
         <h3>Commercial Reels</h3>
         <p>Professional promotional videos for brands.</p>
@@ -531,7 +535,6 @@ footer {
         <h3>Brand Promotion</h3>
         <p>Visual content for business marketing.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -549,32 +552,47 @@ footer {
     <div class="portfolio-grid">
 
       <article class="project">
-        <div class="project-image">PROJECT 01</div>
+        <a class="project-image"
+           href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view?usp=drivesdk"
+           target="_blank" rel="noopener">
+          <img src="project-01.jpg.png" alt="Commercial Reel">
+        </a>
         <div class="project-info">
           <h3>Commercial Reel</h3>
           <p>Brand Advertisement</p>
-          <a class="watch" href="https://drive.google.com/"
-             target="_blank">Watch Project ↗</a>
+          <a class="watch"
+             href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view?usp=drivesdk"
+             target="_blank" rel="noopener">Watch Project ↗</a>
         </div>
       </article>
 
       <article class="project">
-        <div class="project-image">PROJECT 02</div>
+        <a class="project-image"
+           href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view?usp=drivesdk"
+           target="_blank" rel="noopener">
+          <img src="project-02.jpg%20.png" alt="Promotional Video">
+        </a>
         <div class="project-info">
           <h3>Promotional Video</h3>
           <p>Product Promotion</p>
-          <a class="watch" href="https://drive.google.com/"
-             target="_blank">Watch Project ↗</a>
+          <a class="watch"
+             href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view?usp=drivesdk"
+             target="_blank" rel="noopener">Watch Project ↗</a>
         </div>
       </article>
 
       <article class="project">
-        <div class="project-image">PROJECT 03</div>
+        <a class="project-image"
+           href="https://drive.google.com/file/d/14lkE9KbfTQo2V0zGbADFqqkRXjmfPTXd/view?usp=drivesdk"
+           target="_blank" rel="noopener">
+          <img src="project-03.jpg.png" alt="AI Video Creation">
+        </a>
         <div class="project-info">
           <h3>AI Video Creation</h3>
           <p>AI Video Production</p>
-          <a class="watch" href="https://drive.google.com/"
-             target="_blank">Watch Project ↗</a>
+          <a class="watch"
+             href="https://drive.google.com/file/d/14lkE9KbfTQo2V0zGbAFDg29u3SFbKtAF/view?usp=drivesdk"
+             target="_blank" rel="noopener">Watch Project ↗</a>
         </div>
       </article>
 
@@ -582,7 +600,6 @@ footer {
   </div>
 </section>
 
-<!-- PRICING -->
 <section id="pricing">
   <div class="container">
 
@@ -600,18 +617,13 @@ footer {
         <h3>Single Reel</h3>
         <div class="count">1 Commercial Reel</div>
         <div class="price">₹999 <small>/ video</small></div>
-
         <ul>
           <li>Custom Scriptwriting</li>
           <li>AI Voiceover</li>
           <li>Beat Sync Editing</li>
           <li>Color Grading</li>
         </ul>
-
-        <a class="plan-button"
-           href="mailto:sundraedits@gmail.com?subject=Single%20Reel%20Booking">
-          Book This Plan
-        </a>
+        <a class="plan-button" href="mailto:sundraedits@gmail.com?subject=Single%20Reel%20Booking">Book This Plan</a>
       </div>
 
       <div class="price-card">
@@ -619,18 +631,13 @@ footer {
         <h3>Weekly Basic</h3>
         <div class="count">2 Reels / Week</div>
         <div class="price">₹1,600 <small>/ week</small></div>
-
         <ul>
           <li>2 Professional Reels</li>
           <li>₹800 Per Reel</li>
           <li>Custom Scripts & Hooks</li>
           <li>Scheduled Deliveries</li>
         </ul>
-
-        <a class="plan-button"
-           href="mailto:sundraedits@gmail.com?subject=Weekly%20Basic%20Booking">
-          Book This Plan
-        </a>
+        <a class="plan-button" href="mailto:sundraedits@gmail.com?subject=Weekly%20Basic%20Booking">Book This Plan</a>
       </div>
 
       <div class="price-card">
@@ -638,18 +645,13 @@ footer {
         <h3>Weekly Pro</h3>
         <div class="count">3 Reels / Week</div>
         <div class="price">₹2,250 <small>/ week</small></div>
-
         <ul>
           <li>3 Professional Reels</li>
           <li>₹750 Per Reel</li>
           <li>Custom Scripts & Hooks</li>
           <li>Scheduled Deliveries</li>
         </ul>
-
-        <a class="plan-button"
-           href="mailto:sundraedits@gmail.com?subject=Weekly%20Pro%20Booking">
-          Book This Plan
-        </a>
+        <a class="plan-button" href="mailto:sundraedits@gmail.com?subject=Weekly%20Pro%20Booking">Book This Plan</a>
       </div>
 
       <div class="price-card">
@@ -657,18 +659,13 @@ footer {
         <h3>Silver Monthly</h3>
         <div class="count">8 Reels / Month</div>
         <div class="price">₹5,999 <small>/ month</small></div>
-
         <ul>
           <li>8 Professional Reels</li>
           <li>Approx. ₹750 Per Reel</li>
           <li>2 Reels Per Week</li>
           <li>Revision Support</li>
         </ul>
-
-        <a class="plan-button"
-           href="mailto:sundraedits@gmail.com?subject=Silver%20Monthly%20Booking">
-          Book This Plan
-        </a>
+        <a class="plan-button" href="mailto:sundraedits@gmail.com?subject=Silver%20Monthly%20Booking">Book This Plan</a>
       </div>
 
       <div class="price-card popular">
@@ -676,18 +673,13 @@ footer {
         <h3>Gold Monthly</h3>
         <div class="count">12 Reels / Month</div>
         <div class="price">₹8,499 <small>/ month</small></div>
-
         <ul>
           <li>12 Professional Reels</li>
           <li>Approx. ₹708 Per Reel</li>
           <li>3 Reels Per Week</li>
           <li>Priority Support</li>
         </ul>
-
-        <a class="plan-button"
-           href="mailto:sundraedits@gmail.com?subject=Gold%20Monthly%20Booking">
-          Book This Plan
-        </a>
+        <a class="plan-button" href="mailto:sundraedits@gmail.com?subject=Gold%20Monthly%20Booking">Book This Plan</a>
       </div>
 
       <div class="price-card">
@@ -695,18 +687,13 @@ footer {
         <h3>Platinum Monthly</h3>
         <div class="count">16 Reels / Month</div>
         <div class="price">₹10,999 <small>/ month</small></div>
-
         <ul>
           <li>16 Professional Reels</li>
           <li>Approx. ₹687 Per Reel</li>
           <li>4 Reels Per Week</li>
           <li>Priority Coordination</li>
         </ul>
-
-        <a class="plan-button"
-           href="mailto:sundraedits@gmail.com?subject=Platinum%20Monthly%20Booking">
-          Book This Plan
-        </a>
+        <a class="plan-button" href="mailto:sundraedits@gmail.com?subject=Platinum%20Monthly%20Booking">Book This Plan</a>
       </div>
 
     </div>
@@ -725,14 +712,12 @@ footer {
   </div>
 </section>
 
-<!-- PROCESS -->
 <section>
   <div class="container">
     <div class="section-label">05 / HOW WE WORK</div>
     <h2>Our Process</h2>
 
     <div class="process-grid">
-
       <div class="process-item">
         <strong>01</strong>
         <h3>Discuss</h3>
@@ -756,12 +741,10 @@ footer {
         <h3>Deliver</h3>
         <p>Deliver the final approved video.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <div class="contact" id="contact">
   <div class="container">
     <div class="section-label" style="color:#aaa">
