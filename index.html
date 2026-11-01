@@ -222,17 +222,19 @@ h2 {
 }
 
 .project-image {
-  aspect-ratio: 4 / 3;
-  background: #e9e6df;
   display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
+  background: #e9e6df;
 }
 
 .project-image img {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
+  object-position: center;
   transition: transform .4s ease;
 }
 
@@ -358,7 +360,9 @@ h2 {
   padding-top: 15px;
 }
 
-.process-item strong { font: 30px Georgia, serif; }
+.process-item strong {
+  font: 30px Georgia, serif;
+}
 
 .process-item p {
   color: var(--muted);
@@ -435,7 +439,7 @@ footer {
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="button" href="https://wa.me/919334309446" target="_blank" rel="noopener">Let's Talk</a>
+    <a class="button" href="#contact">Let's Talk</a>
   </div>
 </header>
 
@@ -539,7 +543,7 @@ footer {
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PORTFOLIO: ALL THREE IMAGE AND VIDEO LINKS FIXED -->
 <section id="work">
   <div class="container">
     <div class="section-label">03 / SELECTED WORK</div>
@@ -551,48 +555,66 @@ footer {
 
     <div class="portfolio-grid">
 
+      <!-- PROJECT 01 -->
       <article class="project">
         <a class="project-image"
-           href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view?usp=drivesdk"
-           target="_blank" rel="noopener">
-          <img src="project-01.jpg.png" alt="Commercial Reel">
+           href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img src="project-01.jpg.png"
+               alt="Project 01 Commercial Reel"
+               loading="lazy">
         </a>
+
         <div class="project-info">
           <h3>Commercial Reel</h3>
           <p>Brand Advertisement</p>
           <a class="watch"
-             href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view?usp=drivesdk"
-             target="_blank" rel="noopener">Watch Project ↗</a>
+             href="https://drive.google.com/file/d/13XlCbyM-QEOWYxg3u0UDGmE-VzuUy4Bl/view"
+             target="_blank"
+             rel="noopener noreferrer">Watch Project ↗</a>
         </div>
       </article>
 
+      <!-- PROJECT 02 -->
       <article class="project">
         <a class="project-image"
-           href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view?usp=drivesdk"
-           target="_blank" rel="noopener">
-          <img src="project-02.jpg%20.png" alt="Promotional Video">
+           href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img src="project-02.jpg.png"
+               alt="Project 02 Promotional Video"
+               loading="lazy">
         </a>
+
         <div class="project-info">
           <h3>Promotional Video</h3>
           <p>Product Promotion</p>
           <a class="watch"
-             href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view?usp=drivesdk"
-             target="_blank" rel="noopener">Watch Project ↗</a>
+             href="https://drive.google.com/file/d/1gRZIq4cZkco2V0zGbADFqqkRXjmfPTXd/view"
+             target="_blank"
+             rel="noopener noreferrer">Watch Project ↗</a>
         </div>
       </article>
 
+      <!-- PROJECT 03 -->
       <article class="project">
         <a class="project-image"
-           href="https://drive.google.com/file/d/14lkE9KbfTQo2V0zGbADFqqkRXjmfPTXd/view?usp=drivesdk"
-           target="_blank" rel="noopener">
-          <img src="project-03.jpg.png" alt="AI Video Creation">
+           href="https://drive.google.com/file/d/14lkE9KbfTQo1B4greAFDg29u3SFbKtAF/view"
+           target="_blank"
+           rel="noopener noreferrer">
+          <img src="project-03.jpg.png"
+               alt="Project 03 AI Video Creation"
+               loading="lazy">
         </a>
+
         <div class="project-info">
           <h3>AI Video Creation</h3>
           <p>AI Video Production</p>
           <a class="watch"
-             href="https://drive.google.com/file/d/14lkE9KbfTQo2V0zGbAFDg29u3SFbKtAF/view?usp=drivesdk"
-             target="_blank" rel="noopener">Watch Project ↗</a>
+             href="https://drive.google.com/file/d/14lkE9KbfTQo1B4greAFDg29u3SFbKtAF/view"
+             target="_blank"
+             rel="noopener noreferrer">Watch Project ↗</a>
         </div>
       </article>
 
@@ -758,14 +780,12 @@ footer {
       Get in touch to discuss your next project.
     </p>
 
-    <a class="button" href="https://wa.me/919334309446" target="_blank" rel="noopener">
-      Chat on WhatsApp ↗
+    <a class="button" href="mailto:sundraedits@gmail.com">
+      Contact Us ↗
     </a>
 
     <p style="margin-top:25px">
-      WhatsApp: <a href="https://wa.me/919334309446" target="_blank" rel="noopener">+91 93343 09446</a>
-      <br>
-      Email: <a href="mailto:sundraedits@gmail.com">sundraedits@gmail.com</a>
+      Email: sundraedits@gmail.com
       <br>
       Location: Bihar, India
     </p>
